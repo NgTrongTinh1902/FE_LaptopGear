@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand">
       <div class="topbar-logo-header">
         <div class="">
-          <img src="../../../../img/Admin.png" style="width: 150px" class="logo-icon mb-1" alt="logo icon" />
+          <img src="../../../assets/img/Admin.png" style="width: 150px" class="logo-icon mb-1" alt="logo icon" />
         </div>
       </div>
       <div class="mobile-toggle-menu"><i class="bx bx-menu"></i></div>
@@ -22,7 +22,7 @@
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          <img src="../../../../img/logo1.png" class="user-img" alt="user avatar" />
+          <img src="../../../assets/img/Admin.png"  class="user-img" alt="user avatar" />
           <div class="user-info ps-3">
             <p class="user-name mb-0">{{ admin.ho_ten }}</p>
             <p class="designattion mb-0">{{ admin.vai_tro }}</p>

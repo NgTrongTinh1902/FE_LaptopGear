@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand">
       <div class="topbar-logo-header">
         <div class="">
-          <img src="../../../../img/logo.png" style="height: 55px" alt="logo icon" />
+          <img src="../../../assets/img/logo.png" style="height: 55px" alt="logo icon" />
         </div>
         <div class=""></div>
       </div>

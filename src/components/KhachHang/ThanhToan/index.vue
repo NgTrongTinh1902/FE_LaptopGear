@@ -144,7 +144,7 @@
           <div class="form-check d-flex align-items-center">
             <input class="form-check-input me-2" type="radio" name="pay" id="mbbank" checked />
             <label class="form-check-label d-flex align-items-center" for="mbbank">
-              <img src="../../../../img/QR.png" width="50%" class="me-2" />
+              <img src="../../../assets/img/QR.png" width="50%" class="me-2" />
             </label>
           </div>
         </div>

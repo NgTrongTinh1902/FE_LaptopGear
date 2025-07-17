@@ -7,7 +7,7 @@
             <div class="card-body">
               <div class="border p-4 rounded">
                 <div class="text-center mb-4">
-                  <img src="../../../../img/Adminkhongnen.png" width="300" alt="" />
+                  <img src="../../../assets/img/Adminkhongnen.png" width="300" alt="" />
                   <h4 class="mt-3 font-weight-bold text-uppercase text-nowrap">
                     ĐĂNG NHẬP ADMIN <span class="text-primary">Laptop Gear</span>
                   </h4>

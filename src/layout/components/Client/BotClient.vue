@@ -40,7 +40,7 @@
                         <hr class=" mt-0 d-inline-block mx-auto"
                             style="width: 60px; background-color: #7c4dff; height: 2px" /><br>
                         <div class="text-center mb-2">
-                            <img src="../../../../img/logokhongnen1.png" class="img-fluid"
+                            <img src="../../../assets/img/logokhongnen1.png" class="img-fluid"
                                 style="width: 400px; height: auto;" alt="">
                         </div>
                         <p>
