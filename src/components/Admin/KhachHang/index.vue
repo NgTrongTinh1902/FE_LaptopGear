@@ -197,12 +197,12 @@ export default {
       return new Intl.NumberFormat("vi-VI", { style: "currency", currency: "VND" }).format(number);
     },
     getKhachHang() {
-      axios.get("http://127.0.0.1:8000/api/admin/khach-hang/get-data").then((res) => {
+      axios.get("ps://laptopgear.onrender.com/api/admin/khach-hang/get-data").then((res) => {
         this.list_khach_hang = res.data.data;
       });
     },
     capNhapKhachHang() {
-      axios.post("http://127.0.0.1:8000/api/admin/khach-hang/update", this.edit_khach_hang).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/khach-hang/update", this.edit_khach_hang).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getKhachHang();
@@ -210,7 +210,7 @@ export default {
       });
     },
     xoaKhachHang() {
-      axios.post("http://127.0.0.1:8000/api/admin/khach-hang/delete", this.del_khach_hang).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/khach-hang/delete", this.del_khach_hang).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getKhachHang();
@@ -218,7 +218,7 @@ export default {
       });
     },
     doiTrangThai(value) {
-      axios.post("http://127.0.0.1:8000/api/admin/khach-hang/change-status", value).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/khach-hang/change-status", value).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getKhachHang();

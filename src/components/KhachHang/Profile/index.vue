@@ -403,7 +403,7 @@ export default {
   methods: {
     // loadDiaChi() {
     //     axios
-    //         .get('http://127.0.0.1:8000/api/khach-hang/dia-chi/data', {
+    //         .get('ps://laptopgear.onrender.com/api/khach-hang/dia-chi/data', {
     //             headers: {
     //                 Authorization: "Bearer " + localStorage.getItem("khach_hang_login"),
     //             },
@@ -420,7 +420,7 @@ export default {
     // },
     // addDiaChi() {
     //     axios
-    //         .post('http://127.0.0.1:8000/api/khach-hang/dia-chi/create', this.dia_chi, {
+    //         .post('ps://laptopgear.onrender.com/api/khach-hang/dia-chi/create', this.dia_chi, {
     //             headers: {
     //                 Authorization: "Bearer " + localStorage.getItem("khach_hang_login"),
     //             },
@@ -443,7 +443,7 @@ export default {
     //         })
     // },
     updateProfile() {
-      axios.post("http://127.0.0.1:8000/api/khach-hang/profile/update", this.khach_hang).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/khach-hang/profile/update", this.khach_hang).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
         }
@@ -452,7 +452,7 @@ export default {
     // updateDiaChi() {
     //     // console.log(this.detail_dia_chi);
     //     axios
-    //         .post('http://127.0.0.1:8000/api/khach-hang/dia-chi/update', this.detail_dia_chi, {
+    //         .post('ps://laptopgear.onrender.com/api/khach-hang/dia-chi/update', this.detail_dia_chi, {
     //             headers: {
     //                 Authorization: "Bearer " + localStorage.getItem("khach_hang_login"),
     //             },
@@ -475,7 +475,7 @@ export default {
     // },
     // deleteDiaChi() {
     //     axios
-    //         .post('http://127.0.0.1:8000/api/khach-hang/dia-chi/delete', this.detail_dia_chi, {
+    //         .post('ps://laptopgear.onrender.com/api/khach-hang/dia-chi/delete', this.detail_dia_chi, {
     //             headers: {
     //                 Authorization: "Bearer " + localStorage.getItem("khach_hang_login"),
     //             },
@@ -498,7 +498,7 @@ export default {
     // },
     // doiMatKhau() {
     //     axios
-    //         .post("http://127.0.0.1:8000/api/khach-hang/update-password", this.doi_mat_khau, {
+    //         .post("ps://laptopgear.onrender.com/api/khach-hang/update-password", this.doi_mat_khau, {
     //             headers: {
     //                 Authorization: "Bearer " + localStorage.getItem("khach_hang_login"),
     //             },

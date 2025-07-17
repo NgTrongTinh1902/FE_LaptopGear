@@ -281,17 +281,17 @@ export default {
       return new Intl.NumberFormat("vi-VI", { style: "currency", currency: "VND" }).format(number);
     },
     getDanhMuc() {
-    axios.get("http://127.0.0.1:8000/api/admin/danh-muc/get-data").then((res) => {
+    axios.get("ps://laptopgear.onrender.com/api/admin/danh-muc/get-data").then((res) => {
       this.list_danh_muc = res.data.data;
     });
   },
     getSanPham() {
-      axios.get("http://127.0.0.1:8000/api/admin/san-pham/get-data").then((res) => {
+      axios.get("ps://laptopgear.onrender.com/api/admin/san-pham/get-data").then((res) => {
         this.list_san_pham = res.data.data;
       });
     },
     themSanPham() {
-      axios.post("http://127.0.0.1:8000/api/admin/san-pham/add-data", this.create_san_pham).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/san-pham/add-data", this.create_san_pham).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.create_san_pham = {};
@@ -300,7 +300,7 @@ export default {
       });
     },
     capNhapSanPham() {
-      axios.post("http://127.0.0.1:8000/api/admin/san-pham/update", this.edit_san_pham).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/san-pham/update", this.edit_san_pham).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getSanPham();
@@ -308,7 +308,7 @@ export default {
       });
     },
     xoaSanPham() {
-      axios.post("http://127.0.0.1:8000/api/admin/san-pham/delete", this.del_san_pham).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/san-pham/delete", this.del_san_pham).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getSanPham();
@@ -316,7 +316,7 @@ export default {
       });
     },
     doiTrangThai(value) {
-      axios.post("http://127.0.0.1:8000/api/admin/san-pham/change-status", value).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/san-pham/change-status", value).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getSanPham();

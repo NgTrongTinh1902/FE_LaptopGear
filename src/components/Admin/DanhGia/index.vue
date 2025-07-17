@@ -115,12 +115,12 @@ export default {
   },
   methods: {
     getDanhGia() {
-      axios.get("http://127.0.0.1:8000/api/admin/danh-gia/get-data").then((res) => {
+      axios.get("ps://laptopgear.onrender.com/api/admin/danh-gia/get-data").then((res) => {
         this.list_danh_gia = res.data.data;
       });
     },
     xoaDanhGia() {
-      axios.post("http://127.0.0.1:8000/api/admin/danh-gia/delete", this.del_danh_gia).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/danh-gia/delete", this.del_danh_gia).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getDanhGia();
@@ -128,7 +128,7 @@ export default {
       });
     },
     doiTrangThai(value) {
-      axios.post("http://127.0.0.1:8000/api/admin/danh-gia/change-status", value).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/danh-gia/change-status", value).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getDanhGia();

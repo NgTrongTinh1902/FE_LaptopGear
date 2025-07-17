@@ -150,7 +150,7 @@ export default {
   methods: {
     thongKeKhachHang() {
       axios
-        .post("http://127.0.0.1:8000/api/admin/thong-ke/duyet-khach-hang", this.search1)
+        .post("ps://laptopgear.onrender.com/api/admin/thong-ke/duyet-khach-hang", this.search1)
         .then((res) => {
           if (res.data.status) {
             this.is_view1 = true;
@@ -166,7 +166,7 @@ export default {
     },
     thongKeHoaDon() {
       axios
-        .post("http://127.0.0.1:8000/api/admin/thong-ke/duyet-hoa-don", this.search2)
+        .post("ps://laptopgear.onrender.com/api/admin/thong-ke/duyet-hoa-don", this.search2)
         .then((res) => {
           if (res.data.status) {
             this.is_view2 = true;

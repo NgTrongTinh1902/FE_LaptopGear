@@ -82,7 +82,7 @@ export default {
             });
         },
 		// logout() {
-		// 	axios.get('http://127.0.0.1:8000/api/khach-hang/dang-xuat', {
+		// 	axios.get('ps://laptopgear.onrender.com/api/khach-hang/dang-xuat', {
 		// 		headers: {
 		// 			Authorization: "Bearer " + localStorage.getItem("khach_hang_login"),
 		// 		},
@@ -104,7 +104,7 @@ export default {
 		// 		});
 		// },
 		// logoutAll() {
-		// 	axios.get('http://127.0.0.1:8000/api/khach-hang/dang-xuat-tat-ca', {
+		// 	axios.get('ps://laptopgear.onrender.com/api/khach-hang/dang-xuat-tat-ca', {
 		// 		headers: {
 		// 			Authorization: "Bearer " + localStorage.getItem("khach_hang_login"),
 		// 		},

@@ -179,12 +179,12 @@ export default {
   },
   methods: {
     getDanhMuc() {
-      axios.get("http://127.0.0.1:8000/api/admin/danh-muc/get-data").then((res) => {
+      axios.get("ps://laptopgear.onrender.com/api/admin/danh-muc/get-data").then((res) => {
         this.list_danh_muc = res.data.data;
       });
     },
     themDanhMuc() {
-      axios.post("http://127.0.0.1:8000/api/admin/danh-muc/add-data", this.create_danh_muc).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/danh-muc/add-data", this.create_danh_muc).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.create_danh_muc = {};
@@ -193,7 +193,7 @@ export default {
       });
     },
     capNhatDanhMuc() {
-      axios.post("http://127.0.0.1:8000/api/admin/danh-muc/update", this.edit_danh_muc).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/danh-muc/update", this.edit_danh_muc).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getDanhMuc();
@@ -201,7 +201,7 @@ export default {
       });
     },
     xoaDanhMuc() {
-      axios.post("http://127.0.0.1:8000/api/admin/danh-muc/delete", this.del_danh_muc).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/danh-muc/delete", this.del_danh_muc).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getDanhMuc();
@@ -209,7 +209,7 @@ export default {
       });
     },
     doiTrangThai(value) {
-      axios.post("http://127.0.0.1:8000/api/admin/danh-muc/change-status", value).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/danh-muc/change-status", value).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getDanhMuc();

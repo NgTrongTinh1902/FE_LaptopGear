@@ -136,7 +136,7 @@ export default {
       delete payload.re_mat_khau;
 
       axios
-        .post("http://127.0.0.1:8000/api/khach-hang/dang-ky", payload)
+        .post("ps://laptopgear.onrender.com/api/khach-hang/dang-ky", payload)
         .then((res) => {
           if (res.data.status) {
             this.$toast.success(res.data.message);

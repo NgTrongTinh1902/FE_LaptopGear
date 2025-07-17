@@ -96,7 +96,7 @@ export default {
     },
 
 getSanPham() {
-  axios.get("http://127.0.0.1:8000/api/khach-hang/hoa-don/get-data").then((res) => {
+  axios.get("ps://laptopgear.onrender.com/api/khach-hang/hoa-don/get-data").then((res) => {
     const raw = res.data.data;
 
     const grouped = {};

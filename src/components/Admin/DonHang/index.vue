@@ -151,12 +151,12 @@ export default {
       return new Intl.NumberFormat("vi-VI", { style: "currency", currency: "VND" }).format(number);
     },
     getHoaDon() {
-      axios.get("http://127.0.0.1:8000/api/admin/don-hang/get-data").then((res) => {
+      axios.get("ps://laptopgear.onrender.com/api/admin/don-hang/get-data").then((res) => {
         this.list_hoa_don = res.data.data;
       });
     },
     xoaHoaDon() {
-      axios.post("http://127.0.0.1:8000/api/admin/don-hang/delete", this.del_hoa_don).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/don-hang/delete", this.del_hoa_don).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getHoaDon();
@@ -164,7 +164,7 @@ export default {
       });
     },
     duyetHoaDon(value) {
-      axios.post("http://127.0.0.1:8000/api/admin/don-hang/change-status", value).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/don-hang/change-status", value).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getHoaDon();

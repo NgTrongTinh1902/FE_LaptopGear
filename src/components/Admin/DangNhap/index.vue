@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     dangNhap() {
-      axios.post("http://127.0.0.1:8000/api/admin/dang-nhap", this.thong_tin_dang_nhap).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/dang-nhap", this.thong_tin_dang_nhap).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
 

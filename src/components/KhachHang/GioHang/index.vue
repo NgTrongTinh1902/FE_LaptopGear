@@ -180,7 +180,7 @@ export default {
       };
 
       axios
-        .post("http://127.0.0.1:8000/api/khach-hang/gio-hang/dat-hang", payload)
+        .post("ps://laptopgear.onrender.com/api/khach-hang/gio-hang/dat-hang", payload)
         .then((res) => {
           if (res.data.status) {
             this.$toast.success("Vui lòng thanh toán!");
@@ -202,12 +202,12 @@ export default {
     },
 
     getSanPham() {
-      axios.get("http://127.0.0.1:8000/api/khach-hang/gio-hang/get-data").then((res) => {
+      axios.get("ps://laptopgear.onrender.com/api/khach-hang/gio-hang/get-data").then((res) => {
         this.list_gio_hang = res.data.data.map((sp) => ({ ...sp, da_chon: false }));
       });
     },
     xoaSanPham() {
-      axios.post("http://127.0.0.1:8000/api/khach-hang/gio-hang/delete", this.del_san_pham).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/khach-hang/gio-hang/delete", this.del_san_pham).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getSanPham();
@@ -219,7 +219,7 @@ tangSoLuong(index) {
   const newSoLuong = item.so_luong + 1;
 
   axios
-    .post("http://127.0.0.1:8000/api/khach-hang/gio-hang/update", {
+    .post("ps://laptopgear.onrender.com/api/khach-hang/gio-hang/update", {
       ma_sp: item.ma_sp,
       so_luong: newSoLuong,
     })
@@ -251,7 +251,7 @@ capNhatSoLuong(item) {
   };
 
   axios
-    .post("http://127.0.0.1:8000/api/khach-hang/gio-hang/update", data)
+    .post("ps://laptopgear.onrender.com/api/khach-hang/gio-hang/update", data)
     .then((res) => {
       if (res.data.status) {
         this.$toast.success("Cập nhật số lượng thành công");
@@ -270,7 +270,7 @@ capNhatSoLuong(item) {
         return;
       }
 
-      axios.post("http://127.0.0.1:8000/api/khach-hang/gio-hang/delete-nhieu", { danh_sach: daChon }).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/khach-hang/gio-hang/delete-nhieu", { danh_sach: daChon }).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getSanPham();

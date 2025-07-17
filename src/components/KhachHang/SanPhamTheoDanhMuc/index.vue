@@ -53,7 +53,7 @@ watch: {
   methods: {
   loadSanPhamTheoDanhMuc() {
     const ma_dm = this.$route.params.ma_dm;
-    axios.get("http://127.0.0.1:8000/api/client/Laptop/get-data-trang-chu").then((res) => {
+    axios.get("ps://laptopgear.onrender.com/api/client/Laptop/get-data-trang-chu").then((res) => {
       if (res.data.data) {
         this.list_laptop = res.data.data.filter((sp) => sp.trang_thai === 1 && sp.ma_dm === ma_dm);
       }
@@ -67,7 +67,7 @@ watch: {
     },
     getLaptop() {
       axios
-        .get("http://127.0.0.1:8000/api/client/Laptop/get-data-trang-chu")
+        .get("ps://laptopgear.onrender.com/api/client/Laptop/get-data-trang-chu")
         .then((res) => {
           if (res.data.data) {
             this.list_laptop = res.data.data;
@@ -80,7 +80,7 @@ watch: {
 getDanhMuc() {
   const ma_dm = this.$route.params.ma_dm;
 
-  axios.get("http://127.0.0.1:8000/api/khach-hang/danh-muc/get-data").then((res) => {
+  axios.get("ps://laptopgear.onrender.com/api/khach-hang/danh-muc/get-data").then((res) => {
     this.list_danh_muc = res.data.data;
 
     // Tìm tên danh mục

@@ -272,7 +272,7 @@ export default {
     },
     getLaptop() {
       axios
-        .get("http://127.0.0.1:8000/api/client/Laptop/get-data-trang-chu")
+        .get("ps://laptopgear.onrender.com/api/client/Laptop/get-data-trang-chu")
         .then((res) => {
           if (res.data.data) {
             this.list_laptop = res.data.data;
@@ -283,7 +283,7 @@ export default {
         });
     },
     getDanhMuc() {
-      axios.get("http://127.0.0.1:8000/api/khach-hang/danh-muc/get-data").then((res) => {
+      axios.get("ps://laptopgear.onrender.com/api/khach-hang/danh-muc/get-data").then((res) => {
         this.list_danh_muc = res.data.data;
       });
     },

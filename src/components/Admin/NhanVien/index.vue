@@ -294,13 +294,13 @@ export default {
             return new Intl.NumberFormat("vi-VI", { style: "currency", currency: "VND" }).format(number,);
         },
     getNhanVien() {
-      axios.get("http://127.0.0.1:8000/api/admin/nhan-vien/get-data")
+      axios.get("ps://laptopgear.onrender.com/api/admin/nhan-vien/get-data")
       .then((res) => {
         this.list_nhan_vien = res.data.data;
       });
     },
     themNhanVien() {
-      axios.post("http://127.0.0.1:8000/api/admin/nhan-vien/add-data", this.create_nhan_vien)
+      axios.post("ps://laptopgear.onrender.com/api/admin/nhan-vien/add-data", this.create_nhan_vien)
       .then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
@@ -310,7 +310,7 @@ export default {
       });
     },
     capNhapNhanVien() {
-      axios.post("http://127.0.0.1:8000/api/admin/nhan-vien/update", this.edit_nhan_vien)
+      axios.post("ps://laptopgear.onrender.com/api/admin/nhan-vien/update", this.edit_nhan_vien)
       .then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
@@ -319,7 +319,7 @@ export default {
       });
     },
     xoaNhanVien() {
-      axios.post("http://127.0.0.1:8000/api/admin/nhan-vien/delete", this.del_nhan_vien)
+      axios.post("ps://laptopgear.onrender.com/api/admin/nhan-vien/delete", this.del_nhan_vien)
       .then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
@@ -328,7 +328,7 @@ export default {
       });
     },
     doiTrangThai(value) {
-      axios.post("http://127.0.0.1:8000/api/admin/nhan-vien/change-status", value).then((res) => {
+      axios.post("ps://laptopgear.onrender.com/api/admin/nhan-vien/change-status", value).then((res) => {
         if (res.data.status) {
           this.$toast.success(res.data.message);
           this.getNhanVien();

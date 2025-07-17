@@ -190,7 +190,7 @@ export default {
     methods: {
         doiMatKhau() {
             axios
-                .post("http://127.0.0.1:8000/api/admin/doi-mat-khau", this.doi_mat_khau, {
+                .post("ps://laptopgear.onrender.com/api/admin/doi-mat-khau", this.doi_mat_khau, {
                     headers: {
                         Authorization: "Bearer " + localStorage.getItem("nhan_vien_login"),
                     },
@@ -217,7 +217,7 @@ export default {
 
 updateProfile() {
     axios
-        .post("http://127.0.0.1:8000/api/admin/profile/update", this.admin)
+        .post("ps://laptopgear.onrender.com/api/admin/profile/update", this.admin)
         .then((res) => {
             if (res.data.status) {
                 this.$toast.success(res.data.message);

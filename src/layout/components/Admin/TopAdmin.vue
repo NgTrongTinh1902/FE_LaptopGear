@@ -74,7 +74,7 @@ mounted() {
   methods: {
     logout() {
       axios
-        .get("http://127.0.0.1:8000/api/admin/dang-xuat", {
+        .get("ps://laptopgear.onrender.com/api/admin/dang-xuat", {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("nhan_vien_login"),
           },
@@ -97,7 +97,7 @@ mounted() {
     },
     logoutAll() {
       axios
-        .get("http://127.0.0.1:8000/api/admin/dang-xuat-tat-ca", {
+        .get("ps://laptopgear.onrender.com/api/admin/dang-xuat-tat-ca", {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("nhan_vien_login"),
           },

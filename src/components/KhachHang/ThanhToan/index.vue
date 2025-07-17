@@ -230,14 +230,14 @@ datHang() {
   };
 
   axios
-    .post("http://127.0.0.1:8000/api/khach-hang/thanh-toan/dat-hang", payload)
+    .post("ps://laptopgear.onrender.com/api/khach-hang/thanh-toan/dat-hang", payload)
     .then((res) => {
       if (res.data.status) {
         this.$toast.success("Đặt hàng thành công! Mã hóa đơn: " + res.data.ma_hoa_don);
 
         // Xóa từng sản phẩm vừa mua khỏi giỏ hàng (gọi API xóa theo ma_kh và ma_sp)
         const promises = sanPhamMua.map((sp) => {
-          return axios.post("http://127.0.0.1:8000/api/khach-hang/gio-hang/remove-item", {
+          return axios.post("ps://laptopgear.onrender.com/api/khach-hang/gio-hang/remove-item", {
             ma_kh: kh.ma_kh,
             ma_sp: sp.ma_sp,
           });
@@ -269,13 +269,13 @@ datHang() {
 }
 ,
     getThanhToan() {
-      axios.get("http://127.0.0.1:8000/api/khach-hang/thanh-toan/get-data").then((res) => {
+      axios.get("ps://laptopgear.onrender.com/api/khach-hang/thanh-toan/get-data").then((res) => {
         this.list_thanh_toan = res.data.data;
       });
     },
 
     // themDanhMuc() {
-    //   axios.post("http://127.0.0.1:8000/api/admin/danh-muc/add-data", this.create_danh_muc).then((res) => {
+    //   axios.post("ps://laptopgear.onrender.com/api/admin/danh-muc/add-data", this.create_danh_muc).then((res) => {
     //     if (res.data.status) {
     //       this.$toast.success(res.data.message);
     //       this.create_danh_muc = {};
@@ -284,7 +284,7 @@ datHang() {
     //   });
     // },
     // capNhatDanhMuc() {
-    //   axios.post("http://127.0.0.1:8000/api/admin/danh-muc/update", this.edit_danh_muc).then((res) => {
+    //   axios.post("ps://laptopgear.onrender.com/api/admin/danh-muc/update", this.edit_danh_muc).then((res) => {
     //     if (res.data.status) {
     //       this.$toast.success(res.data.message);
     //       this.getDanhMuc();
@@ -292,7 +292,7 @@ datHang() {
     //   });
     // },
     // xoaDanhMuc() {
-    //   axios.post("http://127.0.0.1:8000/api/admin/danh-muc/delete", this.del_danh_muc).then((res) => {
+    //   axios.post("ps://laptopgear.onrender.com/api/admin/danh-muc/delete", this.del_danh_muc).then((res) => {
     //     if (res.data.status) {
     //       this.$toast.success(res.data.message);
     //       this.getDanhMuc();

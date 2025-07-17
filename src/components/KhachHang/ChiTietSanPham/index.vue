@@ -285,7 +285,7 @@ export default {
       };
 
       axios
-        .post("http://127.0.0.1:8000/api/khach-hang/chi-tiet-san-pham/add-data", data)
+        .post("ps://laptopgear.onrender.com/api/khach-hang/chi-tiet-san-pham/add-data", data)
         .then((res) => {
           if (res.data.status) {
             this.$toast.success(res.data.message);
@@ -299,7 +299,7 @@ export default {
     },
     getLaptop() {
       axios
-        .get("http://127.0.0.1:8000/api/client/Laptop/get-data")
+        .get("ps://laptopgear.onrender.com/api/client/Laptop/get-data")
         .then((res) => {
           if (res.data.data) {
             this.tt_san_pham_khac = res.data.data;
@@ -311,7 +311,7 @@ export default {
     },
     loadData() {
       axios
-        .get("http://127.0.0.1:8000/api/client/Laptop/san-pham/" + this.id_san_pham)
+        .get("ps://laptopgear.onrender.com/api/client/Laptop/san-pham/" + this.id_san_pham)
         .then((res) => {
           if (res.data.status) {
             this.tt_san_pham = res.data.data_1;
