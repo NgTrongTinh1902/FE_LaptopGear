@@ -12,16 +12,11 @@
       </div>
       <nav class="navbar navbar-expand-xl w-100">
         <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
-          
+
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-outline-dark fs-6"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-           <i class="fa-solid fa-list"></i>
+            <a class="nav-link dropdown-toggle text-outline-dark fs-6" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-list"></i>
               DANH MỤC SẢN PHẨM
             </a>
             <ul class="dropdown-menu">
@@ -74,7 +69,7 @@
             </router-link>
           </li>
 
-                    <li class="nav-item">
+          <li class="nav-item">
             <router-link to="/khach-hang/thanh-toan">
               <a class="nav-link" href="/khach-hang/thanh-toan">
                 <div class="parent-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
@@ -82,7 +77,7 @@
               </a>
             </router-link>
           </li>
-                    <li class="nav-item">
+          <li class="nav-item">
             <router-link to="/khach-hang/hoa-don">
               <a class="nav-link" href="/khach-hang/hoa-don">
                 <div class="parent-icon"><i class="fa-solid fa-file-invoice"></i></div>
@@ -95,8 +90,7 @@
     </div>
 
     <a href="/khach-hang/gio-hang">
-      <i class="fa-solid fa-cart-shopping text-danger fa-2xl me-1"></i><a class="text-danger fa-xl">Giỏ hàng</a></a
-    >
+      <i class="fa-solid fa-cart-shopping text-danger fa-2xl me-1"></i><a class="text-danger fa-xl">Giỏ hàng</a></a>
   </div>
 
   <!-- <div class="position-fixed bottom-5 end-0 m-4 d-flex flex-column gap-4 mb-5">
@@ -105,33 +99,29 @@
       </a>
     </div> -->
 
-  <div class="position-fixed bottom-0 end-0 m-4 d-flex flex-column gap-4 mb-5">
+  <!-- <div class="position-fixed bottom-0 end-0 m-4 d-flex flex-column gap-4 mb-5">
     <a href="tel:0358275621">
-      <img width="48" height="48" src="../../../../img/1807538_phone_icon.png" alt="Gọi điện thoại" />
+      <img width="48" height="48" src="../../../../public/img/1807538_phone_icon.png" alt="Gọi điện thoại" />
     </a>
 
-    <!-- Zalo -->
+    Zalo
     <a href="https://zalo.me" target="_blank">
       <div style="width: 48px; height: 48px; border-radius: 12px; overflow: hidden; background-color: white">
-        <img src="../../../../img/7044033_zalo_icon.png" width="48" height="50" alt="zalo" style="object-fit: cover" />
+        <img src="/img/7044033_zalo_icon.png" width="48" height="50" alt="zalo" style="object-fit: cover" />
       </div>
     </a>
 
-    <!-- Tiktok -->
+    Tiktok
     <a href="https://www.tiktok.com" target="_blank">
-      <img width="52  " height="52" src="../../../../img/7024783_tiktok_social media_icon.png" alt="telegram" />
+      <img width="52" height="52" src="/img/7024783_tiktok_social_media_icon.png" alt="tiktok" />
     </a>
 
-    <!-- Facebook Messenger -->
+    Facebook Messenger
     <a href="https://m.me/yourpageusername?ref=dang-nhap" target="_blank">
-      <img
-        width="48"
-        height="48"
-        src="../../../../img/4745733_chat_facebook_media_message_messenger_icon.png"
-        alt="facebook messenger"
-      />
+      <img width="48" height="48" src="/img/4745733_chat_facebook_media_message_messenger_icon.png" alt="facebook messenger" />
     </a>
-  </div>
+  </div> -->
+
 </template>
 
 <script>
